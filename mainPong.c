@@ -236,25 +236,29 @@ int main()
 		// si se pulsa una tecla
 		if(kbhit())
 		{
-			char k = getch();
+			//char k = getch();
 
 			// Player 1 UP
-			if(k == 'q' && p1.Y > 1)
+			//if(k == 'q' && p1.Y > 1)
+			if(GetAsyncKeyState('Q') && p1.Y > 1)
 			{
 				p1.Y -= 1;
 			}
 			// Player 1 DOWN
-			if(k == 'a' && p1.Y+3 <28)
+			//if(k == 'a' && p1.Y+3 <28)
+			if(GetAsyncKeyState('A') && p1.Y +3 < 28)
 			{
 				p1.Y += 1;
 			}
 			// Player 2 UP
-			if(k == 72 && p2.Y > 1)
+			//if(k == 72 && p2.Y > 1)
+			if(GetAsyncKeyState(VK_UP) && p2.Y > 1)
 			{
 				p2.Y -= 1;
 			}
 			// Player 2 DOWN
-			if(k == 80 && p2.Y+3 <28)
+			//if(k == 80 && p2.Y+3 <28)
+			if(GetAsyncKeyState(VK_DOWN) && p2.Y+3 <28)
 			{
 				p2.Y += 1;
 			}
